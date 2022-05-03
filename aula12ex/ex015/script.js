@@ -1,16 +1,16 @@
 function verificar() {
-    var data = new Date()
-    var ano = data.getFullYear()
+    var data = new Date() // Pegando a data atual com new Date()
+    var ano = data.getFullYear() // Pegando o ano atual com 4 dígitos com getFullYear()
     var fano = document.getElementById('txtano')
     var res = document.querySelector('div#res')
-    if (fano.value.length == 0 || fano.value > ano) {
+    if (fano.value.length == 0 || fano.value > ano) { // Verifica se o comprimento do valor é == 0
         window.alert('Verifique os dados e tente novamente!')
     } else {
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
-        var genero = ''
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        var genero = '' // A variável recebeu vazio
+        var img = document.createElement('img') // Criou o elemento tag img dinamicamente
+        img.setAttribute('id', 'foto') // Criou o atributo id com o nome foto. É a mesma coisa em HTML <img id='foto'>
         if (fsex[0].checked) {
             genero = 'Homem'
             if (idade >= 0 && idade < 10) {
